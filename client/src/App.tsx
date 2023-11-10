@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { WebSocketProvider, useWebSocket } from "./WebSocketContext";
+import { Button } from "@/components/ui/button";
 
 const ChatComponent: React.FC = () => {
   const [message, setMessage] = useState<string>("");
@@ -30,6 +31,7 @@ const ChatComponent: React.FC = () => {
           <p key={index}>{msg}</p>
         ))}
       </div>
+      <Button>Click me</Button>
     </div>
   );
 };
